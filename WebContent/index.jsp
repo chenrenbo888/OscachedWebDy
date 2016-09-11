@@ -10,8 +10,15 @@
 <body>
 	现在时间： <%= new Date() %>
 	<br/>
-	<oscache:cache>
+	<oscache:cache scope="session" >
 	缓存时间：<%= new Date() %>
 	</oscache:cache>
+	<br/>
+	uri缓存
+	只要有一个用户缓存了一个uri，那么这个uri将一直缓存在内存中，存到了applicationContext域中
+	<!-- <oscache:cache scope="session"></oscache:cache> 改变所存的域-->
+	<!-- <oscache:cache time="3"></oscache:cache> 改变所存的时间-->
+	<!-- <oscache:cache key=""></oscache:cache> key值，可以不是uri-->
+	<!-- oscached -->
 </body>
 </html>
